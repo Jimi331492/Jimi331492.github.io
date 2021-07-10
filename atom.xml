@@ -5,9 +5,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="/"/>
+  <link href="https://Jimi331492.github.io/"/>
   <updated>2020-03-16T10:41:30.000Z</updated>
-  <id>/</id>
+  <id>https://Jimi331492.github.io/</id>
   
   <author>
     <name>Jimi Lo</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Hexo-Theme-Sakura</title>
-    <link href="/2018/12/12/Hexo-Theme-Sakura/"/>
-    <id>/2018/12/12/Hexo-Theme-Sakura/</id>
+    <link href="https://Jimi331492.github.io/2018/12/12/Hexo-Theme-Sakura/"/>
+    <id>https://Jimi331492.github.io/2018/12/12/Hexo-Theme-Sakura/</id>
     <published>2018-12-12T14:16:01.000Z</published>
     <updated>2020-03-16T10:41:30.000Z</updated>
     
@@ -29,12 +29,12 @@
     
     </summary>
     
-      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="https://Jimi331492.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="web" scheme="/tags/web/"/>
+      <category term="web" scheme="https://Jimi331492.github.io/tags/web/"/>
     
-      <category term="悦读" scheme="/tags/%E6%82%A6%E8%AF%BB/"/>
+      <category term="悦读" scheme="https://Jimi331492.github.io/tags/%E6%82%A6%E8%AF%BB/"/>
     
   </entry>
   
