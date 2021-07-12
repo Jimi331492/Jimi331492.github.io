@@ -1,3 +1,16 @@
+p.aplayer{
+    height: 2em;
+    text-align: center;
+    font-size: 16px;
+    padding-top:6px;
+}
+ul.link_ul li{
+    list-style-type:none;
+    background: url("https://cdn.jsdelivr.net/gh/Jimi331492/cdn@1.2/img/icon/redheart.png") no-repeat 0rem 0.3rem;
+    background-size: 0.8rem 0.8rem;
+    text-indent: 2em;
+
+}
 .aplayer-container {
     position: absolute;
     bottom: 0;
