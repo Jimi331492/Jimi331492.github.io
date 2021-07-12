@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">如何在hexo发布文章 | 妙妙智慧屋</title>
+  <title itemprop="name">MD基本语法介绍 | 妙妙智慧屋</title>
   
     <link rel="shortcut icon" href="/images/favicon.ico">
   
@@ -360,7 +360,7 @@
     </div>
     <header class="pattern-header single-header">
       <h1 class="entry-title">
-      如何在hexo发布文章</h1>
+      MD基本语法介绍</h1>
       <p class="entry-census">
         <span>
           <a href="mmgoodstudy.icu">
@@ -386,11 +386,86 @@
         <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
         
         <div class="entry-content">
-          <p>欢迎大家来到我的博客！</p>
-<h1 id="这是一个一级标题"><a href="#这是一个一级标题" class="headerlink" title="这是一个一级标题"></a>这是一个一级标题</h1><h2 id="这是一个二级标题"><a href="#这是一个二级标题" class="headerlink" title="这是一个二级标题"></a>这是一个二级标题</h2><h3 id="这是一个三级标题"><a href="#这是一个三级标题" class="headerlink" title="这是一个三级标题"></a>这是一个三级标题</h3><h4 id="这是一个四级标题"><a href="#这是一个四级标题" class="headerlink" title="这是一个四级标题"></a>这是一个四级标题</h4><h5 id="这是一个五级标题"><a href="#这是一个五级标题" class="headerlink" title="这是一个五级标题"></a>这是一个五级标题</h5><pre><code class="这是一个放代码的地方">I am code
+          <h1 id="Markdown基本语法介绍"><a href="#Markdown基本语法介绍" class="headerlink" title="Markdown基本语法介绍"></a>Markdown基本语法介绍</h1><h2 id="Markdown介绍"><a href="#Markdown介绍" class="headerlink" title="Markdown介绍"></a>Markdown介绍</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档。由约翰·格鲁伯（英语：John Gruber）于2004创建。Markdown 文档后缀为 .md, .markdown。可以导出 HTML 、Word、图像、PDF、Epub 等多种格式的文档。</p>
+<h2 id="Markdown基本语法"><a href="#Markdown基本语法" class="headerlink" title="Markdown基本语法"></a>Markdown基本语法</h2><h3 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;在想要设置为标题的文字前面加上#来表示。一个#是一级标题，两个#是二级标题，以此类推，最多到六级，和html中的h1-h6相同。<br>示例：</p>
+<pre><code class="这是一个代码块"># 一级标题
+## 二级标题
+### 三级标题
+#### 四级标题
+##### 五级标题
+###### 六级标题
 </code></pre>
-<p>可以放文章的地方</p>
-
+<p>效果如下</p>
+<h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><h4 id="四级标题"><a href="#四级标题" class="headerlink" title="四级标题"></a>四级标题</h4><h5 id="五级标题"><a href="#五级标题" class="headerlink" title="五级标题"></a>五级标题</h5><h6 id="六级标题"><a href="#六级标题" class="headerlink" title="六级标题"></a>六级标题</h6><h3 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h3><pre><code class="这是一个代码块">**加粗**
+*倾斜*
+***加粗且倾斜***
+~~贯穿线~~
+</code></pre>
+<p>效果如下<br><strong>加粗</strong><br><em>倾斜</em><br><strong><em>加粗且倾斜</em></strong><br><del>贯穿线</del></p>
+<h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><pre><code class="这是一个代码块">&gt;这是一段引用的话
+&gt;&gt;这也是一段引用的话
+</code></pre>
+<p>效果如下</p>
+<blockquote>
+<p>这是一段引用的话</p>
+<blockquote>
+<p>这也是一段引用的话</p>
+</blockquote>
+</blockquote>
+<h3 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h3><pre><code class="这是一个放代码的地方">**********
+------
+_______
+</code></pre>
+<p>效果如下</p>
+<hr>
+<hr>
+<hr>
+<h3 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h3><pre><code class="这是一个放代码的地方">[name](url)
+</code></pre>
+<p>示例:<a href="/music">我的歌单</a></p>
+<p><br></p>
+<h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3><h4 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h4><p>无序列表用 - + * 任何一种都可以</p>
+<pre><code class="这是一个放代码的地方">- 列表内容1
+- 列表内容2
++ 列表内容3
++ 列表内容4
+* 列表内容5
+* 列表内容6
+</code></pre>
+<p>效果如下</p>
+<ul>
+<li>列表内容1</li>
+<li>列表内容2</li>
+</ul>
+<ul>
+<li>列表内容3</li>
+<li>列表内容4</li>
+</ul>
+<ul>
+<li>列表内容5</li>
+<li>列表内容6</li>
+</ul>
+<h4 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h4><p>有序列表就是数字加点就可以了</p>
+<pre><code class="这是一个放代码的地方">1.有序列表
+2.有序列表
+3.有序列表
+</code></pre>
+<p>效果如下</p>
+<ol>
+<li>有序列表</li>
+<li>有序列表</li>
+<li>有序列表</li>
+</ol>
+<h3 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h3><h4 id="单行代码"><a href="#单行代码" class="headerlink" title="单行代码"></a>单行代码</h4><p>单行代码用两个反引号包裹起来就可以</p>
+<pre><code class="这是一个放代码的地方">`代码内容`
+</code></pre>
+<p>效果如下:<br><code>代码内容</code></p>
+<h4 id="多行代码"><a href="#多行代码" class="headerlink" title="多行代码"></a>多行代码</h4><p>多行代码用六个反引号包裹起来 前面三个后面三个<br>效果如下</p>
+<pre><code class="多行代码">多行代码
+多行代码
+多行代码
+</code></pre>
+<h3 id="未完待续…"><a href="#未完待续…" class="headerlink" title="未完待续…"></a>未完待续…</h3>
         </div>
         <!-- .entry-content -->
         <div class="single-reward">

@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">Tag: How | 妙妙智慧屋</title>
+  <title itemprop="name">如何利用Hexo+github搭建一个博客 | 妙妙智慧屋</title>
   
     <link rel="shortcut icon" href="/images/favicon.ico">
   
@@ -350,163 +350,168 @@
   </div>
 </header>
 
-      
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
 <div class="pattern-center-blank"></div>
-<div class="pattern-center ">
-  <div class="pattern-attachment-img">
-    <img src="https://cdn.jsdelivr.net/gh/Jimi331492/cdn@1.1/img/loader/orange.progress-bar-stripe-loader.svg" data-src="How.img" class="lazyload" onerror="imgError(this,3)" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;">
+
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/Jimi331492/cdn@1.1/img/custom/avatar.jpg);" src="https://cdn.jsdelivr.net/gh/Jimi331492/cdn@1.1/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/Jimi331492/cdn@1.1/img/custom/avatar.jpg">
+    </div>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+      如何利用Hexo+github搭建一个博客</h1>
+      <p class="entry-census">
+        <span>
+          <a href="mmgoodstudy.icu">
+            <img src="https://cdn.jsdelivr.net/gh/Jimi331492/cdn@1.1/img/custom/avatar.jpg">
+          </a>
+        </span>
+        <span>
+          <a href="mmgoodstudy.icu"></a>
+        </span>
+        <span class="bull">
+        ·</span>
+        2021-7-13<span class="bull">
+        ·</span>
+      <span id="busuanzi_value_page_pv"></span>次阅读</p>
+    </header>
   </div>
-  <header class="pattern-header ">
-    <h1 class="cat-title">How</h1>
-  </header>
-</div>
+
 <div id="content" class="site-content">
   <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+        
+        <div class="entry-content">
+          <h1 id="如何利用Hexo-github搭建一个博客"><a href="#如何利用Hexo-github搭建一个博客" class="headerlink" title="如何利用Hexo+github搭建一个博客"></a>如何利用Hexo+github搭建一个博客</h1><h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><p>1.git的安装和配置<br>2.node.js的安装配置<br>3.注册GitHub<br>4.申请一个域名  (非必要)</p>
+<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>1.新建一个文件夹，用做博客本地根目录。<br>2.点击鼠标右键，选择Git Bash<br>3.输入：</p>
+<pre><code class="这是一个代码块">npm install hexo-cli -g
+hexo init
+--完成后会得到一个下面的目录结构
+--node_modules
+--scaffolds
+--source            放博客内容源码
+--themes            博客的主题
+--.gitgnore
+--._config.yml   ⭐配置文件
+--package.json
+</code></pre>
+<h3 id="在GitHub建立远程仓库"><a href="#在GitHub建立远程仓库" class="headerlink" title="在GitHub建立远程仓库"></a>在GitHub建立远程仓库</h3><p>1.在GitHub里Create a new repository 注意:仓库名命名格式一定是UserName+“github.io”</p>
+<h3 id="更改-config-yml文件配置"><a href="#更改-config-yml文件配置" class="headerlink" title="更改_config.yml文件配置"></a>更改_config.yml文件配置</h3><pre><code class="_config.yml">
+.#博客名字，显示在网站标题
+title: 妙妙智慧屋       
+
+
+#⭐远程仓库地址
+url: https://Username.github.io
+
+#⭐用git方式将本地仓库推送到远程仓库master分支上
+deploy:
+  type: git
+  repo: 
+     github: https://github.com/Username/Username.github.io.git
+  branch: master
+
+</code></pre>
+<hr>
+<h2 id="恭喜你现在有自己的博客了"><a href="#恭喜你现在有自己的博客了" class="headerlink" title="恭喜你现在有自己的博客了"></a>恭喜你现在有自己的博客了</h2><p>在博客根目录下git bash输入即可查看</p>
+<pre><code class="本地仓库根目录">
+hexo g
+hexo s  
+##完成后在localhost:4000
+
+##推送至远程仓库 网址：https://username.github.io
+hexo clean &amp;&amp; hexo g &amp;&amp; hexo d 
+
+#hexo clean 清除缓存
+#hexo g 构建
+#hexo d 推送至远端
+</code></pre>
+<p>更多详细教程<a href="https://github.com/honjun/hexo-tag-fancybox_img/blob/master/README-zh_cn.md" target="_blank" rel="noopener">请点击…</a></p>
+
+        </div>
+        <!-- .entry-content -->
+        <div class="single-reward">
+          <div class="reward-open">赏
+            <div class="reward-main">
+              <ul class="reward-row">
+                <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/Jimi331492/cdn@1.2/img/custom/donate/myAliPayQR.jpg"></li>
+                <li class="wechat-code"><img src="https://cdn.jsdelivr.net/gh/Jimi331492/cdn@1.2/img/custom/donate/myWechatQR.jpg"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
+      </article>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+        
+          
+            <div class="post-nepre full next">
+          
+            <a href="/2021/07/12/hexo-sakura/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/Jimi331492/cdn@1.1/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/Jimi331492/cdn@1.1/img/custom/avatar.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/Jimi331492/cdn@1.1/img/custom/avatar.jpg">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                Hexo Sakura使用教程</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+      </section>
       
-  <!-- 首页默认取最最新文章集 -->
-  
-    <article class="post post-list" itemscope="" itemtype="https://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/2021/07/13/Hello Blog/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://cdn.jsdelivr.net/gh/Jimi331492/cdn@1.1/img/custom/avatar.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/2021/07/13/Hello Blog/">
-    如何利用Hexo+github搭建一个博客</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2021-7-13</div>
-    <p>
-    记录一下自己博客的搭建</p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/2021/07/13/Hello Blog/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
-    <article class="post post-list" itemscope="" itemtype="https://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/2021/07/12/hexo-sakura/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://cdn.jsdelivr.net/gh/Jimi331492/cdn@1.1/img/custom/avatar.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/2021/07/12/hexo-sakura/">
-    Hexo Sakura使用教程</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2021-7-12</div>
-    <p>
-    教程</p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/2021/07/12/hexo-sakura/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
-    <article class="post post-list" itemscope="" itemtype="https://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/2021/07/12/none/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://cdn.jsdelivr.net/gh/Jimi331492/cdn@1.1/img/custom/avatar.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/2021/07/12/none/">
-    该分类为空</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2021-7-12</div>
-    <p>
-    博主还没发文</p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/2021/07/12/none/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
-    <article class="post post-list" itemscope="" itemtype="https://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/2021/07/11/Hello md/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://cdn.jsdelivr.net/gh/Jimi331492/cdn@1.1/img/custom/avatar.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/2021/07/11/Hello md/">
-    MD基本语法介绍</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2021-7-11</div>
-    <p>
-    Markdown基本语法介绍</p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/2021/07/11/Hello md/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
+<div id="vcomments"></div>
+<script>
+  window.onload = function(){
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        appId: "PGlB0dWUHhHoNahwvkarMTJg-gzGzoHsz",
+        appKey: "p51jbXXSPaj4kowNiyeIx9VM",
+        path: window.location.pathname,
+        placeholder: "..."
+      })
+  }
+</script>
 
-
-      <div class="clearer">
-      </div>
-    </main>
-    <!--  -->
-    
-  </div>
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+          <a href="mmgoodstudy.icu" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/Jimi331492/cdn@1.1/img/custom/avatar.jpg" itemprop="image" alt="" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+            <a href="mmgoodstudy.icu" itemprop="url" rel="author"></a>
+            </h3>
+          </div>
+        </div>
+        <hr>
+        <p><i class="iconfont icon-write"></i>一个好人</p>
+      </section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
 </div>
+
+
+
     </div>    
     <div class="ins-search">
     <div class="ins-search-mask"></div>
