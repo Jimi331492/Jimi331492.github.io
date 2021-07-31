@@ -26,11 +26,11 @@ function bot_ui_ini() {
     }).then(function () {
         botui.message.add({
             delay: 1100,
-            content: "这里是 玄 少"
+            content: "这里是AKA小阿Miao丶,生活从来不会单调"
         }).then(function () {
             botui.message.add({
                 delay: 1100,
-                content: "一个可爱的蓝孩子~"
+                content: "来自湖南的代表~是个搞IT的小菜鸟，skrrrrrrr哒！    "
             }).then(function () {
                 botui.action.button({
                     delay: 1600,
@@ -65,53 +65,40 @@ function bot_ui_ini() {
         secondpart = function () {
             botui.message.add({
                 delay: 1500,
-                content: "目前就读于河北地质大学,软件工程专业…"
+                content: "喜欢听歌搞技术，是你理解不了的艺术，到了你到不了的地步！"
             }).then(function () {
                 botui.message.add({
                     delay: 1500,
-                    content: "是一个热爱技术，挑战自己的人…"
+                    content: "享受挑战，突破自己"
                 }).then(function () {
                     botui.message.add({
                         delay: 1200,
-                        content: "创建这个博客主要想记录自己的进步…"
+                        content: "你若要来，奉陪到底! Ang？"
                     }).then(function () {
-                        botui.message.add({
-                            delay: 1500,
-                            content: "技术上主攻 Java 开发和 前端开发， 家里有猫有狗，偶尔也折腾一下区块链…"
-                        }).then(function () {
-                            botui.message.add({
-                                delay: 1500,
-                                content: "学习的方向，是前端&后端方向的全栈工程师（Full Stack equal Will all…"
-                            }).then(function () {
-                                botui.message.add({
-                                    delay: 1800,
-                                    content: "最爱的人是李明明，希望有一天有钱能包养她…"
-                                }).then(function () {
-                                    botui.action.button({
-                                        delay: 1100,
-                                        action: [{
-                                            text: "为什么叫玄少呢？ 🤔",
-                                            value: "why-mashiro"
+                        botui.action.button({
+                            delay: 1100,
+                            action: [{
+                            text: "你能别押了吗，快吐了 🤔",
+                            value: "why-mashiro"
                                         }]
-                                    }).then(function (a) {
-                                        thirdpart()
-                                    })
-                                })
-                            })
+                        }).then(function (a) {
+                            thirdpart()
                         })
                     })
+                            
+                    
                 })
             })
         },
         thirdpart = function () {
             botui.message.add({
                 delay: 1E3,
-                content: "玄少是因为妙的繁体字是玅，拆开来就是玄少啦…"
+                content: "嘤嘤嘤，喜欢说唱，不押就不押嘛"
             }).then(function () {
                 botui.action.button({
                     delay: 1500,
                     action: [{
-                        text: "你说你家里有猫有狗，你是更喜欢猫还是狗呢？ 🤔",
+                        text: "说说你为什么想创建这个博客吧？ 🤔",
                         value: "why-cat"
                     }]
                 }).then(function (a) {
@@ -122,16 +109,16 @@ function bot_ui_ini() {
         fourthpart = function () {
             botui.message.add({
                 delay: 1E3,
-                content: "更喜欢狗，因为狗的互动性更高，给人的反馈更好，猫就不会了… "
+                content: "喜欢特立独行的事物，在这个微博抖音疯狂肆虐的时代，我觉得自己搭建个人博客是一个很Cool的事情！ "
             }).then(function () {
                 botui.message.add({
                     delay: 1100,
-                    content: "而且猫真的一点都不听话（就是说我们家那只）！！"
+                    content: "主要也是有对这方面的兴趣，兴趣是最好的老师嘛"
                 }).then(function () {
                     botui.action.button({
                         delay: 1500,
                         action: [{
-                            text: "域名有什么含意吗？(ง •_•)ง",
+                            text: "那你这个域名有什么含意吗？(ง •_•)ง",
                             value: "why-domain"
                         }]
                     }).then(function (a) {
@@ -143,12 +130,30 @@ function bot_ui_ini() {
         fifthpart = function () {
             botui.message.add({
                 delay: 1E3,
-                content: "emmmm，mmgoodstduy.icu 意思就是妙妙好好学习最后会进ICU。。"
+                content: "意思就是妙妙好好学习最后会进ICU。。"
             }).then(function () {
                 botui.message.add({
                     delay: 1600,
-                    content: "那么，仔细看看我的博客吧？ ^_^"
+                    content: "也代表了I see You(其实就是icu域名便宜嘤)"
+                }).then(function () {
+                    botui.message.add({
+                        delay: 1600,
+                        content: "最后欢迎给我留言噢！"
+                }).then(function () {
+                    botui.action.button({
+                        delay: 1500,
+                        action: [{
+                            text: "你在教我做事？🙄",
+                            value: "teachMe"
+                        }]
+                    }).then(function (a) {
+                        botui.message.add({
+                            delay: 1600,
+                            content: "嘤嘤嘤..."
+                    })
+                    })
                 })
             })
+        })
         } 
 }
