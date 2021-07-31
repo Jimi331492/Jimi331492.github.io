@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://Jimi331492.github.io/"/>
-  <updated>2021-07-12T19:30:38.561Z</updated>
+  <updated>2021-07-13T18:05:46.019Z</updated>
   <id>https://Jimi331492.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>电商管理后台 API 接口文档</title>
+    <link href="https://Jimi331492.github.io/2021/07/14/api%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3/"/>
+    <id>https://Jimi331492.github.io/2021/07/14/api接口文档/</id>
+    <published>2021-07-13T18:03:18.499Z</published>
+    <updated>2021-07-13T18:05:46.019Z</updated>
+    
+    <summary type="html">
+    
+      接口文档
+    
+    </summary>
+    
+      <category term="资源" scheme="https://Jimi331492.github.io/categories/%E8%B5%84%E6%BA%90/"/>
+    
+    
+      <category term="What" scheme="https://Jimi331492.github.io/tags/What/"/>
+    
+  </entry>
   
   <entry>
     <title>如何利用Hexo+github搭建一个博客</title>
