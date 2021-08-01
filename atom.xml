@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://Jimi331492.github.io/"/>
-  <updated>2021-07-13T18:05:46.019Z</updated>
+  <updated>2021-08-01T05:27:22.304Z</updated>
   <id>https://Jimi331492.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>电商管理后台 API 接口文档</title>
-    <link href="https://Jimi331492.github.io/2021/07/14/api%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3/"/>
-    <id>https://Jimi331492.github.io/2021/07/14/api接口文档/</id>
-    <published>2021-07-13T18:03:18.499Z</published>
-    <updated>2021-07-13T18:05:46.019Z</updated>
+    <title>电商管理后台说明文档</title>
+    <link href="https://Jimi331492.github.io/2021/08/01/e_mS/"/>
+    <id>https://Jimi331492.github.io/2021/08/01/e_mS/</id>
+    <published>2021-08-01T00:33:53.187Z</published>
+    <updated>2021-08-01T05:27:22.304Z</updated>
     
     <summary type="html">
     
@@ -29,7 +29,27 @@
     
     </summary>
     
-      <category term="资源" scheme="https://Jimi331492.github.io/categories/%E8%B5%84%E6%BA%90/"/>
+      <category term="文档" scheme="https://Jimi331492.github.io/categories/%E6%96%87%E6%A1%A3/"/>
+    
+    
+      <category term="What" scheme="https://Jimi331492.github.io/tags/What/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>电商管理后台API接口文档</title>
+    <link href="https://Jimi331492.github.io/2021/07/14/api%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3/"/>
+    <id>https://Jimi331492.github.io/2021/07/14/api接口文档/</id>
+    <published>2021-07-13T18:03:18.499Z</published>
+    <updated>2021-08-01T06:11:24.384Z</updated>
+    
+    <summary type="html">
+    
+      接口文档
+    
+    </summary>
+    
+      <category term="文档" scheme="https://Jimi331492.github.io/categories/%E6%96%87%E6%A1%A3/"/>
     
     
       <category term="What" scheme="https://Jimi331492.github.io/tags/What/"/>
@@ -41,7 +61,7 @@
     <link href="https://Jimi331492.github.io/2021/07/13/Hello%20Blog/"/>
     <id>https://Jimi331492.github.io/2021/07/13/Hello Blog/</id>
     <published>2021-07-12T16:47:52.889Z</published>
-    <updated>2021-07-31T10:43:31.267Z</updated>
+    <updated>2021-08-01T06:09:57.690Z</updated>
     
     <summary type="html">
     
@@ -61,7 +81,7 @@
     <link href="https://Jimi331492.github.io/2021/07/12/hexo-sakura/"/>
     <id>https://Jimi331492.github.io/2021/07/12/hexo-sakura/</id>
     <published>2021-07-12T10:17:07.940Z</published>
-    <updated>2021-07-12T10:33:26.210Z</updated>
+    <updated>2021-08-01T06:10:30.017Z</updated>
     
     <summary type="html">
     
@@ -101,7 +121,7 @@
     <link href="https://Jimi331492.github.io/2021/07/11/Hello%20md/"/>
     <id>https://Jimi331492.github.io/2021/07/11/Hello md/</id>
     <published>2021-07-11T04:13:41.708Z</published>
-    <updated>2021-07-12T19:24:57.836Z</updated>
+    <updated>2021-08-01T06:12:20.952Z</updated>
     
     <summary type="html">
     
