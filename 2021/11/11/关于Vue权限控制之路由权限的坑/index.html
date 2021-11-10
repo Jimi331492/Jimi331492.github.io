@@ -15,7 +15,7 @@
   
   <meta name="google-site-verification" content="l9icZOtPw8xZWnSGGBqC8DopK6kWpMqd4zSXBgVyf7E">
   <meta name="baidu-site-verification" content="code-B75e3aEWvn">
-  <title itemprop="name">电商管理后台说明文档 | 妙妙智慧屋</title>
+  <title itemprop="name">关于Vue3.0权限控制之路由权限的坑 | 妙妙智慧屋</title>
   
     <link rel="shortcut icon" href="/images/favicon.ico">
   
@@ -369,11 +369,11 @@
 
   <div class="pattern-center single-center">
     <!-- 有配图默认渲染第一张 -->
-    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/Jimi331492/cdn@1.3/img/logo/vue_logo.jpg);" src="https://cdn.jsdelivr.net/gh/Jimi331492/cdn@1.3/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/Jimi331492/cdn@1.3/img/logo/vue_logo.jpg">
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/Jimi331492/cdn@1.3/img/my_pic/4.webp);" src="https://cdn.jsdelivr.net/gh/Jimi331492/cdn@1.3/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/Jimi331492/cdn@1.3/img/my_pic/4.webp">
     </div>
     <header class="pattern-header single-header">
       <h1 class="entry-title">
-      电商管理后台说明文档</h1>
+      关于Vue3.0权限控制之路由权限的坑</h1>
       <p class="entry-census">
         <span>
           <a href="mmgoodstudy.icu">
@@ -385,7 +385,7 @@
         </span>
         <span class="bull">
         ·</span>
-        2021-8-1<span class="bull">
+        2021-11-11<span class="bull">
         ·</span>
       <span id="busuanzi_value_page_pv"></span>次阅读</p>
     </header>
@@ -399,85 +399,14 @@
         <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
         
         <div class="entry-content">
-          <h1 id="e-managesystem一个基于Vue3-ElementUI-Plus的电商后台管理系统"><a href="#e-managesystem一个基于Vue3-ElementUI-Plus的电商后台管理系统" class="headerlink" title="e_managesystem一个基于Vue3+ElementUI Plus的电商后台管理系统"></a>e_managesystem一个基于Vue3+ElementUI Plus的电商后台管理系统</h1><h2 id="项目预览"><a href="#项目预览" class="headerlink" title="项目预览"></a>项目预览</h2><h4 id="点击预览"><a href="#点击预览" class="headerlink" title="点击预览"></a><a href="https://www.mmgoodstudy.icu/e_manageSystem_Preview/">点击预览</a></h4><h2 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h2><p>用于管理用户账号，商品分类，商品信息，订单，数据统计等业务功能<br><img src="https://cdn.jsdelivr.net/gh/Jimi331492/cdn/img/aboutProject/e_mS_1.png" alt="Image text"></p>
-<h2 id="开发模式"><a href="#开发模式" class="headerlink" title="开发模式"></a>开发模式</h2><p>电商后台管理系统整体采用前后端分离的开发模式,其中前端项目是基于Vue技术栈的SPA项目<br><img src="https://cdn.jsdelivr.net/gh/Jimi331492/cdn/img/aboutProject/e_mS_2.png" alt="Image text"></p>
-<h2 id="项目技术栈"><a href="#项目技术栈" class="headerlink" title="项目技术栈"></a>项目技术栈</h2><ul>
-<li>Vue3</li>
-<li>Vue-router</li>
-<li>ElementUI Plus</li>
-<li>Axios</li>
-<li>Echarts</li>
+          <h1 id="Vue3-0权限控制之路由权限"><a href="#Vue3-0权限控制之路由权限" class="headerlink" title="Vue3.0权限控制之路由权限"></a>Vue3.0权限控制之路由权限</h1><h2 id="最近再写一个前端管理模板，想用vue3-0实现路由权限控制-遇到了一系列问题，记录一下"><a href="#最近再写一个前端管理模板，想用vue3-0实现路由权限控制-遇到了一系列问题，记录一下" class="headerlink" title="最近再写一个前端管理模板，想用vue3.0实现路由权限控制 遇到了一系列问题，记录一下"></a>最近再写一个前端管理模板，想用vue3.0实现路由权限控制 遇到了一系列问题，记录一下</h2><h3 id="先说一下-系统的操作流程"><a href="#先说一下-系统的操作流程" class="headerlink" title="先说一下 系统的操作流程"></a>先说一下 系统的操作流程</h3><ul>
+<li>用户输入账号登录</li>
+<li>登录成功,后端回userId和token</li>
+<li>前端拿到userId和token之后立马请求用户基本信息和菜单信息</li>
+<li>拿到菜单信息，根据url是否为空判断，生成用户路由，和公共的路由合并生成总的路由信息，并将其保存在sessionStorge里(这里就是个坑) <h4 id="sessionStorge只能保存字符串，将其用JSON-Stringfly字符串化后-路由的component会丢失-，我这里用的时路由懒加载，所以component是-gt-import-‘src’-所以component是一个function，而JSON-Stringfly是不能对函数起作用的，这里就会丢失component，导致后期页面刷新空白，因为后面路由要从sessionStorge里拿"><a href="#sessionStorge只能保存字符串，将其用JSON-Stringfly字符串化后-路由的component会丢失-，我这里用的时路由懒加载，所以component是-gt-import-‘src’-所以component是一个function，而JSON-Stringfly是不能对函数起作用的，这里就会丢失component，导致后期页面刷新空白，因为后面路由要从sessionStorge里拿" class="headerlink" title="sessionStorge只能保存字符串，将其用JSON.Stringfly字符串化后  路由的component会丢失 ，我这里用的时路由懒加载，所以component是 ()=&gt;import(‘src’) 所以component是一个function，而JSON.Stringfly是不能对函数起作用的，这里就会丢失component，导致后期页面刷新空白，因为后面路由要从sessionStorge里拿"></a>sessionStorge只能保存字符串，将其用JSON.Stringfly字符串化后  路由的component会丢失 ，我这里用的时路由懒加载，所以component是 ()=&gt;import(‘src’) 所以component是一个function，而JSON.Stringfly是不能对函数起作用的，这里就会丢失component，导致后期页面刷新空白，因为后面路由要从sessionStorge里拿</h4></li>
+<li>所以在刷新的时候得要么1.循环再赋值 2.寻找更好的存储路由信息的方法，loadsh的deepclone？不知道可以不可以</li>
+<li>其次 由于 vue3.0只搭配vue-router4.0 router 4.0移除了 addRoutes 只能用addRoute来添加路由，前者接收一个路由数组，后者只能接受一个路由里的一个对象</li>
 </ul>
-<h2 id="项目依赖"><a href="#项目依赖" class="headerlink" title="项目依赖"></a>项目依赖</h2><h3 id="运行依赖"><a href="#运行依赖" class="headerlink" title="运行依赖"></a>运行依赖</h3><ul>
-<li>axios =&gt; 发送请求</li>
-<li>echarts =&gt; 数据可视化</li>
-<li>lodash =&gt; js工具库,该项目用到深拷贝与对象合并</li>
-<li>moment =&gt; 时间格式化处理工具库</li>
-<li>nprogress =&gt; 进度条库</li>
-</ul>
-<h3 id="开发依赖"><a href="#开发依赖" class="headerlink" title="开发依赖"></a>开发依赖</h3><ul>
-<li>babel =&gt; es6+语法转换</li>
-<li>eslint/babel-eslint =&gt; 语法检查</li>
-<li>less/less-loader =&gt; less语法</li>
-<li>babel-plugin-transform-remove-console =&gt; 移除console</li>
-<li>babel/plugin-syntax-dynamic-import =&gt; 将import 的写法自动转换为按需引入的方式</li>
-</ul>
-<h2 id="项目优化"><a href="#项目优化" class="headerlink" title="项目优化"></a>项目优化</h2><h3 id="项目优化策略"><a href="#项目优化策略" class="headerlink" title="项目优化策略"></a>项目优化策略</h3><ul>
-<li>生成打包报告<br>通过命令行参数形式生成报告=&gt;vue-cli-service build –report<br>通过可视化ui面板直接查看报告(通过控制台和分析面板)</li>
-<li><p>通过vue.config.js修改webpack的默认配置</p>
-<pre><code class="vue.config.js">const externals = {vue:&#39;Vue&#39;} //需要从外部引入的依赖项，减小打包体积
-// cdn的引用注意先后顺序，例 ElementUI Plus是基于Vue3开发的 必须先引用Vue再引用ElementUI Plus 不然会导致白屏，组件加载不出来
-const cdn={
-   css:[url],
-   js:[url]
-}
-
-module.exports = {
-   //生产模式以./相对路径为根目录，不然打包部署后可能会导致白屏
-   publicPath: process.env.NODE_ENV === &#39;production&#39; ? &#39;./&#39; : &#39;/&#39;, 
-   outputDir: &#39;dist&#39; //打包后输出的文件夹名
-
-   //chain模式配置Webpack
-   chainWebpack: config =&gt; {
-      // 发布模式
-      config.when(process.env.NODE_ENV === &#39;production&#39;, config =&gt; {
-      config
-          .entry(&#39;app&#39;)
-          .clear()
-          .add(&#39;./src/main-prod.js&#39;) //配置不同的入口文件
-      config.externals(externals)// 配置从外部获取依赖项，减小打包体积
-      config.plugin(&#39;html&#39;).tap(args =&gt; {
-          args[0].isProd = true //首页内容定制
-          args[0].cdn = cdn // 还需要再index.html中用&lt;link&gt;&lt;script&gt;forEach导入各个cdn文件
-          return args
-      })
-      })
-
-      //开发模式
-      config.when(process.env.NODE_ENV === &#39;development&#39;, config =&gt; {
-      config
-          .entry(&#39;app&#39;)
-          .clear()
-          .add(&#39;./src/main-dev.js&#39;)
-      config.plugin(&#39;html&#39;).tap(args =&gt; {
-          args[0].isProd = false
-          return args
-      })
-  })
-   }
-}
-</code></pre>
-</li>
-<li><p>为开发模式与发布模式指定不同的打包入口(在vue.config.js配置)<br>开发模式入口文件 src/main-dev.js<br>发布模式入口文件 src/main-prod.js</p>
-</li>
-<li><p>第三方库启用CDN<br>在public/index.html文件头部,将main-prod中的已经进行配置的import(样式表)删除替换为cdn引入</p>
-</li>
-<li><p>首页内容定制 (在vue.config.js配置)</p>
-</li>
-</ul>
-<h2 id="项目展示"><a href="#项目展示" class="headerlink" title="项目展示"></a>项目展示</h2><h4 id="通过GitHub-Page-后端API公共接口-实现预览"><a href="#通过GitHub-Page-后端API公共接口-实现预览" class="headerlink" title="通过GitHub Page + 后端API公共接口 实现预览"></a>通过GitHub Page + 后端API公共接口 实现预览</h4><p>1.在GitHub里先创建一个库，并打开GitHub Page服务<br>2.将打包生成的dist文件夹上传到GitHub里的库中<br>3.输入网址即可查看</p>
-<h4 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h4><p>1.Vue项目中路由得用Hash模式，不然可能无法预览<br>2.公共API得是Https，并开启Enforce HTTPS(在GitHub库里的Setting下的Page项最下面)</p>
-<h2 id="最后说明"><a href="#最后说明" class="headerlink" title="最后说明"></a>最后说明</h2><p>由于各种原因，所以没有单独的写后端，为了省钱也没有配置服务器来，所以此方法只能展示，预览项目<br>但我觉得很香，这也算是我第一个项目了，经过这个项目，我学习到了很多，例如前后端分离开发，SPA单页面应用<br>总结就是ElementUI Plus很强大，对于Vue我可能还需要一点时间来继续深入的理解</p>
 
         </div>
         <!-- .entry-content -->
@@ -506,15 +435,16 @@ module.exports = {
       <div class="toc" style="background: none;"></div>
       <section class="post-squares nextprev">
         
+        
           
-            <div class="post-nepre half previous">
+            <div class="post-nepre full next">
           
-            <a href="/2021/08/31/study_DB/" rel="prev">
+            <a href="/2021/08/31/study_DB/" rel="next">
               <div class="background">
                 <img class="lazyload" src="https://cdn.jsdelivr.net/gh/Jimi331492/cdn@1.3/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/Jimi331492/cdn@1.3/img/my_pic/2.webp" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/Jimi331492/cdn@1.3/img/my_pic/2.webp">
               </div>
               <span class="label">
-              Previous Post</span>
+              Next Post</span>
               <div class="info">
                 <h3>
                 数据库系统常见简答题（持续更新）</h3>
@@ -523,26 +453,22 @@ module.exports = {
             </a>
           </div>
         
-        
-          
-            <div class="post-nepre half next">
-          
-            <a href="/2021/07/14/api接口文档/" rel="next">
-              <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/Jimi331492/cdn@1.3/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/Jimi331492/cdn@1.3/img/my_pic/4.webp" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/Jimi331492/cdn@1.3/img/my_pic/4.webp">
-              </div>
-              <span class="label">
-              Next Post</span>
-              <div class="info">
-                <h3>
-                电商管理后台API接口文档</h3>
-                <hr>
-              </div>
-            </a>
-          </div>
-        
       </section>
       
+<div id="vcomments"></div>
+<script>
+  window.onload = function(){
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        appId: "PGlB0dWUHhHoNahwvkarMTJg-gzGzoHsz",
+        appKey: "p51jbXXSPaj4kowNiyeIx9VM",
+        path: window.location.pathname,
+        placeholder: "..."
+      })
+  }
+</script>
+
       <section class="author-profile">
         <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
           <a href="mmgoodstudy.icu" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/Jimi331492/cdn@1.1/img/custom/avatar.jpg" itemprop="image" alt="" height="70" width="70"></a>

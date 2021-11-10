@@ -15,7 +15,7 @@
   
   <meta name="google-site-verification" content="l9icZOtPw8xZWnSGGBqC8DopK6kWpMqd4zSXBgVyf7E">
   <meta name="baidu-site-verification" content="code-B75e3aEWvn">
-  <title itemprop="name">电商管理后台说明文档 | 妙妙智慧屋</title>
+  <title itemprop="name">数据库系统常见简答题（持续更新） | 妙妙智慧屋</title>
   
     <link rel="shortcut icon" href="/images/favicon.ico">
   
@@ -369,11 +369,11 @@
 
   <div class="pattern-center single-center">
     <!-- 有配图默认渲染第一张 -->
-    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/Jimi331492/cdn@1.3/img/logo/vue_logo.jpg);" src="https://cdn.jsdelivr.net/gh/Jimi331492/cdn@1.3/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/Jimi331492/cdn@1.3/img/logo/vue_logo.jpg">
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/Jimi331492/cdn@1.3/img/my_pic/2.webp);" src="https://cdn.jsdelivr.net/gh/Jimi331492/cdn@1.3/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/Jimi331492/cdn@1.3/img/my_pic/2.webp">
     </div>
     <header class="pattern-header single-header">
       <h1 class="entry-title">
-      电商管理后台说明文档</h1>
+      数据库系统常见简答题（持续更新）</h1>
       <p class="entry-census">
         <span>
           <a href="mmgoodstudy.icu">
@@ -385,7 +385,7 @@
         </span>
         <span class="bull">
         ·</span>
-        2021-8-1<span class="bull">
+        2021-8-31<span class="bull">
         ·</span>
       <span id="busuanzi_value_page_pv"></span>次阅读</p>
     </header>
@@ -399,85 +399,272 @@
         <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
         
         <div class="entry-content">
-          <h1 id="e-managesystem一个基于Vue3-ElementUI-Plus的电商后台管理系统"><a href="#e-managesystem一个基于Vue3-ElementUI-Plus的电商后台管理系统" class="headerlink" title="e_managesystem一个基于Vue3+ElementUI Plus的电商后台管理系统"></a>e_managesystem一个基于Vue3+ElementUI Plus的电商后台管理系统</h1><h2 id="项目预览"><a href="#项目预览" class="headerlink" title="项目预览"></a>项目预览</h2><h4 id="点击预览"><a href="#点击预览" class="headerlink" title="点击预览"></a><a href="https://www.mmgoodstudy.icu/e_manageSystem_Preview/">点击预览</a></h4><h2 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h2><p>用于管理用户账号，商品分类，商品信息，订单，数据统计等业务功能<br><img src="https://cdn.jsdelivr.net/gh/Jimi331492/cdn/img/aboutProject/e_mS_1.png" alt="Image text"></p>
-<h2 id="开发模式"><a href="#开发模式" class="headerlink" title="开发模式"></a>开发模式</h2><p>电商后台管理系统整体采用前后端分离的开发模式,其中前端项目是基于Vue技术栈的SPA项目<br><img src="https://cdn.jsdelivr.net/gh/Jimi331492/cdn/img/aboutProject/e_mS_2.png" alt="Image text"></p>
-<h2 id="项目技术栈"><a href="#项目技术栈" class="headerlink" title="项目技术栈"></a>项目技术栈</h2><ul>
-<li>Vue3</li>
-<li>Vue-router</li>
-<li>ElementUI Plus</li>
-<li>Axios</li>
-<li>Echarts</li>
-</ul>
-<h2 id="项目依赖"><a href="#项目依赖" class="headerlink" title="项目依赖"></a>项目依赖</h2><h3 id="运行依赖"><a href="#运行依赖" class="headerlink" title="运行依赖"></a>运行依赖</h3><ul>
-<li>axios =&gt; 发送请求</li>
-<li>echarts =&gt; 数据可视化</li>
-<li>lodash =&gt; js工具库,该项目用到深拷贝与对象合并</li>
-<li>moment =&gt; 时间格式化处理工具库</li>
-<li>nprogress =&gt; 进度条库</li>
-</ul>
-<h3 id="开发依赖"><a href="#开发依赖" class="headerlink" title="开发依赖"></a>开发依赖</h3><ul>
-<li>babel =&gt; es6+语法转换</li>
-<li>eslint/babel-eslint =&gt; 语法检查</li>
-<li>less/less-loader =&gt; less语法</li>
-<li>babel-plugin-transform-remove-console =&gt; 移除console</li>
-<li>babel/plugin-syntax-dynamic-import =&gt; 将import 的写法自动转换为按需引入的方式</li>
-</ul>
-<h2 id="项目优化"><a href="#项目优化" class="headerlink" title="项目优化"></a>项目优化</h2><h3 id="项目优化策略"><a href="#项目优化策略" class="headerlink" title="项目优化策略"></a>项目优化策略</h3><ul>
-<li>生成打包报告<br>通过命令行参数形式生成报告=&gt;vue-cli-service build –report<br>通过可视化ui面板直接查看报告(通过控制台和分析面板)</li>
-<li><p>通过vue.config.js修改webpack的默认配置</p>
-<pre><code class="vue.config.js">const externals = {vue:&#39;Vue&#39;} //需要从外部引入的依赖项，减小打包体积
-// cdn的引用注意先后顺序，例 ElementUI Plus是基于Vue3开发的 必须先引用Vue再引用ElementUI Plus 不然会导致白屏，组件加载不出来
-const cdn={
-   css:[url],
-   js:[url]
-}
+          <h1 id="数据库系统简答题"><a href="#数据库系统简答题" class="headerlink" title="数据库系统简答题"></a>数据库系统简答题</h1><h2 id="PartⅠ-基本知识与关系模型"><a href="#PartⅠ-基本知识与关系模型" class="headerlink" title="PartⅠ 基本知识与关系模型"></a>PartⅠ 基本知识与关系模型</h2><h3 id="1简述数据，数据库，数据库管理系统，数据库系统的概念"><a href="#1简述数据，数据库，数据库管理系统，数据库系统的概念" class="headerlink" title="1简述数据，数据库，数据库管理系统，数据库系统的概念"></a>1简述数据，数据库，数据库管理系统，数据库系统的概念</h3><pre><code class="答题区">答： 数据：描述事物的符号记录
 
-module.exports = {
-   //生产模式以./相对路径为根目录，不然打包部署后可能会导致白屏
-   publicPath: process.env.NODE_ENV === &#39;production&#39; ? &#39;./&#39; : &#39;/&#39;, 
-   outputDir: &#39;dist&#39; //打包后输出的文件夹名
+     数据库：长期存储在计算机内，有组织，可共享的大量数据的集合
+        基本特征：
+            (1) 数据按照一定的数据模型组织，描述和存储
+            (2) 可为各种用户所共享
+            (3) 具有较小的冗余度
+            (4) 数据独立性较高
+            (5) 易扩展
 
-   //chain模式配置Webpack
-   chainWebpack: config =&gt; {
-      // 发布模式
-      config.when(process.env.NODE_ENV === &#39;production&#39;, config =&gt; {
-      config
-          .entry(&#39;app&#39;)
-          .clear()
-          .add(&#39;./src/main-prod.js&#39;) //配置不同的入口文件
-      config.externals(externals)// 配置从外部获取依赖项，减小打包体积
-      config.plugin(&#39;html&#39;).tap(args =&gt; {
-          args[0].isProd = true //首页内容定制
-          args[0].cdn = cdn // 还需要再index.html中用&lt;link&gt;&lt;script&gt;forEach导入各个cdn文件
-          return args
-      })
-      })
+    数据库管理系统：位于用户与操作系统之间的一层数据管理软件，他与操作系统一样都是计算机的基础软件，
+                也是一个大型复杂的软件系统
+        DBMS的功能：
+            (1) 数据定义
+            (2) 数据组织，存储和管理
+            (3) 数据操纵
+            (4) 数据库的事务管理和运行管理
+            (5) 数据库的建立和维护
+            (6) 其他
 
-      //开发模式
-      config.when(process.env.NODE_ENV === &#39;development&#39;, config =&gt; {
-      config
-          .entry(&#39;app&#39;)
-          .clear()
-          .add(&#39;./src/main-dev.js&#39;)
-      config.plugin(&#39;html&#39;).tap(args =&gt; {
-          args[0].isProd = false
-          return args
-      })
-  })
-   }
-}
+    数据库系统：在计算机系统中引入数据库后的系统。是由数据库，数据库管理系统(及其开发工具),应用系统，
+            数据库管理员和用户组成。
+        特点：
+            (1) 数据结构化
+            (2) 数据共享性高，冗余度低，易扩展
+            (3) 数据独立性高
+            (4) 数据由DBMS统一管理和控制 
 </code></pre>
-</li>
-<li><p>为开发模式与发布模式指定不同的打包入口(在vue.config.js配置)<br>开发模式入口文件 src/main-dev.js<br>发布模式入口文件 src/main-prod.js</p>
-</li>
-<li><p>第三方库启用CDN<br>在public/index.html文件头部,将main-prod中的已经进行配置的import(样式表)删除替换为cdn引入</p>
-</li>
-<li><p>首页内容定制 (在vue.config.js配置)</p>
-</li>
+<h3 id="2-DBMS提供的数据控制功能"><a href="#2-DBMS提供的数据控制功能" class="headerlink" title="2.DBMS提供的数据控制功能"></a>2.DBMS提供的数据控制功能</h3><pre><code class="答题区">答：(1) 数据的安全性保护
+    (2) 数据的完整性检查
+    (3) 并发控制
+    (4) 数据库恢复
+</code></pre>
+<h3 id="3-简述DBMS的概念和功能"><a href="#3-简述DBMS的概念和功能" class="headerlink" title="3.简述DBMS的概念和功能"></a>3.简述DBMS的概念和功能</h3><pre><code class="答题区">答：数据库管理系统是位于用户与操作系统之间的一层数据管理软件
+    (1) 数据定义功能：DBMS提供数据定义语言DDL,用户可以通过DDL定义数据对象
+    (2) 数据组织，存储和管理
+    (3) 数据操纵功能：DBMS提供数据操纵语言DML,实现对数据库的增删改查
+    (4) 数据库的事务管理和运行管理功能：这是DBMS运行是的核心部分，包括并发控制，安全性检查，
+        完整性约束条件的检查和执行，发生故障后的恢复
+    (5) 数据库的建立和维护功能：包括数据库初始数据的输入及转换，数据库的转储与恢复，数据库
+        的重组和性能的监视与分析等。
+    (6) 其他
+</code></pre>
+<h3 id="4-使用数据库系统有什么好处？（好处由特点决定）"><a href="#4-使用数据库系统有什么好处？（好处由特点决定）" class="headerlink" title="4.使用数据库系统有什么好处？（好处由特点决定）"></a>4.使用数据库系统有什么好处？（好处由特点决定）</h3><pre><code class="答题区">答：数据结构化，数据共享性高，冗余度低，易扩充
+    数据独立性高
+    由DBMS统一运行管理；DBMS还提供了数据控制功能
+    查询效率高，准确
+</code></pre>
+<h3 id="5-数据管理的发展阶段与每个阶段的特点"><a href="#5-数据管理的发展阶段与每个阶段的特点" class="headerlink" title="5.数据管理的发展阶段与每个阶段的特点"></a>5.数据管理的发展阶段与每个阶段的特点</h3><pre><code class="答题区">答：
+    1.人工管理阶段：
+    （1）数据不保存（2）数据不共享
+    （3）数据不具有独立性（4）应用程序管理数据
+
+    2.文件系统阶段：
+    （1）数据长期保存
+    （2）数据共享性差、冗余度大
+    （3）数据独立性差：物理独立性逻辑独立性均差
+    （4）由文件系统管理数据
+
+    3.数据库系统阶段:
+    （1）数据结构化（2）数据的共享性高、冗余度低、易扩充
+    （3）数据独立性高（4）由DBMS统一运行管理和控制
+</code></pre>
+<h3 id="6-数据模型的概念，组成数据模型的三要素"><a href="#6-数据模型的概念，组成数据模型的三要素" class="headerlink" title="6.数据模型的概念，组成数据模型的三要素"></a>6.数据模型的概念，组成数据模型的三要素</h3><pre><code class="答题区">答：
+    数据模型：是现实世界数据特征的抽象，一组概念的集合
+    作用：组织，描述，操作数据
+    数据模型三要素：
+        (1) 数据结构：描述数据库的组成对象以及对象之间的联系。
+                    对系统静态特性的描述
+        (2) 数据操作：对数据库中各种对象实例允许进行操作的集合。
+                    对系统动态特性的描述
+        (3) 完整性约束条件：一组完整性规则的集合
+    分类：概念模型，逻辑模型 和物理模型
+        (1) 概念模型：又称信息模型，从用户的观点来对数据和信息建模，用于数据库的设计。
+        (2) 逻辑模型：包括层次模型、网状模型、关系模型、面向对象模型等，用于DBMS的实现。
+        (3) 物理模型：对数据最底层的抽象，描述数据在数据库系统内部的表达方式和存取方式，是面向计算机系统的。
+</code></pre>
+<h3 id="7-概念模型的概念，作用"><a href="#7-概念模型的概念，作用" class="headerlink" title="7.概念模型的概念，作用"></a>7.概念模型的概念，作用</h3><pre><code class="答题区">答：概念：又称信息模型，从用户的观点来对数据和信息建模
+    作用：
+        （1）用于信息世界的建模
+        （2）是现实世界到机器世界的一个中间层次
+        （3）是数据库设计的有力工具
+        （4）是数据库设计人员与用户交流的语言
+</code></pre>
+<h3 id="8-ER图分解时解决三种冲突（在合并分ER图时要解决哪些冲突问题？）"><a href="#8-ER图分解时解决三种冲突（在合并分ER图时要解决哪些冲突问题？）" class="headerlink" title="8.ER图分解时解决三种冲突（在合并分ER图时要解决哪些冲突问题？）"></a>8.ER图分解时解决三种冲突（在合并分ER图时要解决哪些冲突问题？）</h3><pre><code class="答题区">答：属性冲突（属性域冲突、属性取值单位冲突）、命名冲突（同名异议、同义异名）、结构冲突
+</code></pre>
+<h3 id="9-简述说明两级映像所包含的内容？"><a href="#9-简述说明两级映像所包含的内容？" class="headerlink" title="9.简述说明两级映像所包含的内容？"></a>9.简述说明两级映像所包含的内容？</h3><pre><code class="答题区">答：
+    外模式-模式映像、模式-内模式映像
+
+    外模式-模式映像:当模式改变的时候，数据库管理员修改有关的外模式-模式映像，使得可以使外模式保持不变，
+    应用程序是根据外模式编写的，从而应用程序不必修改，保证了数据与程序的逻辑独立性。
+
+    模式-内模式映像：当数据库的存储结构改变时，数据库管理员修改模式-内模式映像，可以使模式保持不变，
+    从而应用程序不必修改，保证了数据与程序的物理独立性。
+</code></pre>
+<h3 id="10-简述数据库系统的三级模式结构，并说明这种结构的优点"><a href="#10-简述数据库系统的三级模式结构，并说明这种结构的优点" class="headerlink" title="10.简述数据库系统的三级模式结构，并说明这种结构的优点"></a>10.简述数据库系统的三级模式结构，并说明这种结构的优点</h3><pre><code class="答题区">答：
+    三级模式是由内模式、模式、外模式组成
+
+    外模式：也称子模式或用户模式，是数据库用户能够看见和使用的局部数据的逻辑结构和特征的描述，
+    是数据库用户的数据视图。外模式涉及的是数据的局部逻辑结构，是模式的子集。
+
+    模式：也称逻辑模式或概念模式，是数据库中全体数据的逻辑结构和特征的描述，是所有用户的公共视图。
+    模式描述的是数据的全局逻辑结构。
+
+    内模式：也称存储模式，是数据在数据库系统内部的表示，即对数据库物理结构和存储方式的描述。
+
+    三级模式的优点：保证数据的独立性，简化了用户接口，有利于数据共享，有利于数据的安全保密。
+    DBMS在三级模式之间提供的两级映像保证了数据库系统中的数据能够具有较高的逻辑独立性和物理独立性。
+
+</code></pre>
+<h3 id="11-什么是数据库的数据独立性？什么叫数据与程序的物理独立性？什么叫数据与程序的逻辑独立性？为什么数据库系统具有数据与程序的独立性？（简述数据库的独立性）"><a href="#11-什么是数据库的数据独立性？什么叫数据与程序的物理独立性？什么叫数据与程序的逻辑独立性？为什么数据库系统具有数据与程序的独立性？（简述数据库的独立性）" class="headerlink" title="11.什么是数据库的数据独立性？什么叫数据与程序的物理独立性？什么叫数据与程序的逻辑独立性？为什么数据库系统具有数据与程序的独立性？（简述数据库的独立性）"></a>11.什么是数据库的数据独立性？什么叫数据与程序的物理独立性？什么叫数据与程序的逻辑独立性？为什么数据库系统具有数据与程序的独立性？（简述数据库的独立性）</h3><pre><code class="答题卡">答：
+    数据独立性：表示应用程序与数据库中的数据不存在依赖关系，它包括逻辑独立性、物理独立性。
+
+    逻辑独立性：是用户的应用程序与数据库的逻辑结构是相互独立的。
+    当模式改变时，数据库管理员修改外模式/模式映像，可以使外模式保持不变，应用程序是根据外模式编写的，
+    从而应用程序不必修改，保证了数据与程序的逻辑独立性。
+
+
+    物理独立性：是用户的应用程序与存储在磁盘上的数据库中的数据是相互独立的
+    当数据库的存储结构改变时，数据库管理员修改模式/内模式映像，可以使模式保持不变，从而应用程序不必修改，
+    保证了数据与程序的物理独立性。
+
+    为何具有数据与程序的独立性：DBMS在三级模式之间提供的两级映像保证了数据库系统中的数据能够具有较高的逻辑独立性和物理独立性。
+</code></pre>
+<h3 id="12-试述关系模型（数据库）的优缺点（特点）"><a href="#12-试述关系模型（数据库）的优缺点（特点）" class="headerlink" title="12.试述关系模型（数据库）的优缺点（特点）"></a>12.试述关系模型（数据库）的优缺点（特点）</h3><pre><code class="答题区">答：
+    优点：关系数据库是以关系模型作为数据的组织方式，
+    关系模型是建立在严格的数学基础之上的；概念单一，结构简单清晰；存取路径对用户透明，从而有更高的数据独立性，
+    更好的安全保密性，简化了程序员的工作。
+
+    缺点：由于存取路径透明，查询效率不如非关系模型。
+</code></pre>
+<h3 id="13-试述网状、层次模型（数据库）的优缺点（特点）"><a href="#13-试述网状、层次模型（数据库）的优缺点（特点）" class="headerlink" title="13.试述网状、层次模型（数据库）的优缺点（特点）"></a>13.试述网状、层次模型（数据库）的优缺点（特点）</h3><pre><code class="答题区">答：
+    层次模型：①有且只有一个结点无双亲②根以外的其他结点有且只有一个双亲
+    优点：数据结构简单清晰，查询效率高，提供了良好的完整性支持
+    缺点：
+    （1）多对多联系表示不自然
+    （2）查询子女必须通过双亲结点
+    （3）对插入和删除操作的限制多，应用程序的编写比较复杂
+    （4）由于结构严谨，层次命令趋于程序化
+
+    网状模型：①允许一个以上的结点无双亲②一个结点可以有多于一个的双亲
+    优点：更加直接的表示现实世界，拥有良好的性能，存取效率较高
+    缺点：
+    （1）结构比较复杂，不利于用户的掌握，
+    （2）DDL、DML语言比较复杂，不利于用户的使用
+</code></pre>
+<h3 id="14-试述数据库完整性保护的主要任务和措施"><a href="#14-试述数据库完整性保护的主要任务和措施" class="headerlink" title="14.试述数据库完整性保护的主要任务和措施"></a>14.试述数据库完整性保护的主要任务和措施</h3><pre><code class="答题区">答：
+    主要任务：保证数据的正确性，相容性提高数据对用户的可用性
+    措施：
+    （1）适当的检查完整性约束条件，保持语义完整。
+    （2）并发控制操作，使其不破坏完整性
+    （3）在系统出现故障后，及时进行数据库的恢复
+</code></pre>
+<h3 id="15-数据库阶段的数据管理有些什么特点"><a href="#15-数据库阶段的数据管理有些什么特点" class="headerlink" title="15.数据库阶段的数据管理有些什么特点"></a>15.数据库阶段的数据管理有些什么特点</h3><pre><code class="答题区">答：
+    （1）采用复杂的数据模型表示数据结构
+    （2）数据的最小存储单元是数据项
+    （3）具有较高的数据与程序的独立性
+    （4）系统为用户提供方便的用户接口
+    （5）系统提供数据控制功能（安全性、完整性、并发控制、数据库的恢复）
+</code></pre>
+<h3 id="16-各数据库相关人员职责"><a href="#16-各数据库相关人员职责" class="headerlink" title="16.各数据库相关人员职责"></a>16.各数据库相关人员职责</h3><pre><code class="答题区">数据库管理员(DBA)
+    （1）决定数据库中信息内容和结构
+    （2）决定数据库的存储结构和存取策略
+    （3）定义数据库的安全性要求和完整性检查约束条件
+    （4）监控数据库的使用与运行
+    （5）数据库的改进和重组
+
+系统分析员
+    （1）负责应用系统的需求分析和规范说明
+    （2）与用户及DBA协商，确定系统的硬软件配置
+    （3）参与数据库的概要设计
+
+应用程序员
+    （1）负责设计编写系统的程序模块，并进行调试和安装
+</code></pre>
+<h3 id="其他小概念"><a href="#其他小概念" class="headerlink" title="其他小概念"></a>其他小概念</h3><ul>
+<li>实体：客观存在并可相互区别的事物</li>
+<li>属性：实体所具有的某一特性</li>
+<li>码：唯一标识实体的属性集称为关键字又叫码（关键字可包含一个或多个属性）</li>
+<li>候选码：若关系中某一属性组的值能唯一标识一个元组，则称该属性组为候选码</li>
+<li>主码：从多个候选码中选择一个作为主码，主码不能随意变换。候选码可以有多个，但是主码只能有一个。</li>
+<li>外码：设F是基本关系R的一个或一组属性，但不是关系R的码，如果F与基本关系S的主码KS相对应，则称F是基本关系R的外码</li>
+<li>域：一组具有相同数据类型的值的集合，属性的取值范围</li>
+<li>实体型：实体名及其属性名集合来抽象刻画同类实体</li>
+<li>实体集：同型实体的集合</li>
+<li>元组：笛卡尔积中的每一个元素，表中的一行</li>
+<li>分量：笛卡尔积中元素的每一个Di</li>
+<li>基数：域中包含值的个数</li>
+<li>主属性：包含在任何一个候选码中的各属性称为主属性</li>
+<li>非主属性： 不包含在任何候选码中的属性称为非主属性</li>
+<li>全码：所有的属性组是这个关系的候选码，则称为全码</li>
+<li>关系模式：对关系的一种描述，静态的，稳定的</li>
+<li>关系：是关系模式在某一时刻的状态或内容。</li>
+<li>DDL：用来定义数据库模式，内模式，外模式</li>
+<li>DML：用来对数据库中数据进行查询，插入，删除，修改的语句</li>
+<li>关系的数据逻辑结构—一张二维表</li>
+<li>关系的定义—–笛卡尔积的有限子集</li>
+<li>传统的集合操作：并交叉笛卡尔积</li>
+<li>关系语言特点：高度非过程化</li>
+<li>专门的关系运算：选择、投影、连接、除法</li>
+<li>五种基本操作：选择、投影、并、差、笛卡尔积——其他的交、差、除均可以用这五种基本运算表示</li>
 </ul>
-<h2 id="项目展示"><a href="#项目展示" class="headerlink" title="项目展示"></a>项目展示</h2><h4 id="通过GitHub-Page-后端API公共接口-实现预览"><a href="#通过GitHub-Page-后端API公共接口-实现预览" class="headerlink" title="通过GitHub Page + 后端API公共接口 实现预览"></a>通过GitHub Page + 后端API公共接口 实现预览</h4><p>1.在GitHub里先创建一个库，并打开GitHub Page服务<br>2.将打包生成的dist文件夹上传到GitHub里的库中<br>3.输入网址即可查看</p>
-<h4 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h4><p>1.Vue项目中路由得用Hash模式，不然可能无法预览<br>2.公共API得是Https，并开启Enforce HTTPS(在GitHub库里的Setting下的Page项最下面)</p>
-<h2 id="最后说明"><a href="#最后说明" class="headerlink" title="最后说明"></a>最后说明</h2><p>由于各种原因，所以没有单独的写后端，为了省钱也没有配置服务器来，所以此方法只能展示，预览项目<br>但我觉得很香，这也算是我第一个项目了，经过这个项目，我学习到了很多，例如前后端分离开发，SPA单页面应用<br>总结就是ElementUI Plus很强大，对于Vue我可能还需要一点时间来继续深入的理解</p>
+<h3 id="17-简述等值连接与自然连接的区别和联系"><a href="#17-简述等值连接与自然连接的区别和联系" class="headerlink" title="17.简述等值连接与自然连接的区别和联系"></a>17.简述等值连接与自然连接的区别和联系</h3><pre><code class="答题区">答：
+    等值连接：连接符号为“=”的连接运算称为，它不要求连接属性的属性名相同。
+    自然连接：是一种特殊的等值连接。要求被连接的两关系有若干同名属性才能进行自然连接。
+
+    等值连接不将重复属性列去掉，而自然连接要去掉重复属性列。
+</code></pre>
+<h3 id="18-试述关系的完整性规则"><a href="#18-试述关系的完整性规则" class="headerlink" title="18.试述关系的完整性规则"></a>18.试述关系的完整性规则</h3><pre><code class="答题区">答：
+    实体的完整性：若属性A是基本关系R的主属性，则A不能取空值。
+
+    参照完整性规则：
+        若F是基本关系R的外码，与基本关系S的主码KS相对应，则对于R中每个元组在F上的值必须为下面两者之一：
+        （1）或者取空值
+        （2）或者等于S中某个元组的主码值
+</code></pre>
+<h3 id="19-关系的三种类型"><a href="#19-关系的三种类型" class="headerlink" title="19.关系的三种类型"></a>19.关系的三种类型</h3><pre><code class="答题区">基本表：实际存在的表，是实际存储数据的逻辑表示。
+
+查询表：查询结果对应的表
+
+视图表：由基本表或者其他视图导出的表，是虚表，不对应实际存储的数据
+</code></pre>
+<h3 id="20-基本关系的六种性质（关系的特性）"><a href="#20-基本关系的六种性质（关系的特性）" class="headerlink" title="20.基本关系的六种性质（关系的特性）"></a>20.基本关系的六种性质（关系的特性）</h3><pre><code class="答题区">（1）列是同质的
+（2）不同的列可来自同一个域
+（3）列的顺序无所谓
+（4）任何两个元组不能完全相同
+（5）行的次序无所谓
+（6）分量必须取原子量
+</code></pre>
+<h3 id="21-简述关系模式与关系的区别"><a href="#21-简述关系模式与关系的区别" class="headerlink" title="21.简述关系模式与关系的区别"></a>21.简述关系模式与关系的区别</h3><pre><code class="答题区">答：
+    关系模式：是型，是对关系的描述，是关系的框架，是静态的，稳定的。
+
+    关系：是值，是关系模式在某一时刻的状态或内容，是动态的，不断变化的
+
+    关系数据库：在一个给定的领域中，所有关系的集合构成关系数据库
+
+    关系数据库的型和值？
+    关系数据库的型：关系数据库模式，是对关系数据库的描述
+    关系数据库的值：这些关系模式在某一时刻对应的关系的集合，称为关系数据库
+</code></pre>
+<h2 id="PartⅡ-数据库语言SQL"><a href="#PartⅡ-数据库语言SQL" class="headerlink" title="PartⅡ 数据库语言SQL"></a>PartⅡ 数据库语言SQL</h2><p> <code>概念：SQL是一种介于关系代数和关系演算之间的结构化查询语言，其功能是数据定义，数据操纵（数据更新、数据查询），数据控制</code></p>
+<h2 id="PartⅢ-数据建模和数据库设计"><a href="#PartⅢ-数据建模和数据库设计" class="headerlink" title="PartⅢ 数据建模和数据库设计"></a>PartⅢ 数据建模和数据库设计</h2><h2 id="PartⅣ-数据库管理系统实现技术"><a href="#PartⅣ-数据库管理系统实现技术" class="headerlink" title="PartⅣ 数据库管理系统实现技术"></a>PartⅣ 数据库管理系统实现技术</h2><h3 id="1-事务的概念，事务的特性，定义事务的语句"><a href="#1-事务的概念，事务的特性，定义事务的语句" class="headerlink" title="1.事务的概念，事务的特性，定义事务的语句"></a>1.事务的概念，事务的特性，定义事务的语句</h3><pre><code class="答题区">概念：事务是用户定义的一个数据库操作序列，这些操作要么全做，要么全不做，是一个不可分割的工作单位。
+    事务是并发控制的基本单位。
+四个特性：ACID
+    （1）原子性：事务中包括的所有操作要么都做，要么都不做。
+    （2）一致性：事务必须使数据库从一个一致性状态变到另一个一致性状态。
+    （3）隔离性：一个事物的执行不能被其他事务干扰。
+    （4）持续性：（永久性）事务一旦提交，对数据库的改变是永久性的。
+    故障恢复可以保证事务的原子性和持续性
+    并发控制可以保证事务的一致性和隔离性
+语句：
+    开始Begin transaction
+    结束commit：提交事务的所有操作。将事务中所有对数据库的更新写回到磁盘上的物理数据库中，事务正常结束。
+        rollback：是数据库滚回到事务开始时的状态。在事务运行的过程中发生了某种故障，事务不能再继续执行，
+            系统将事务对数据库的所有已完成的更新操作全部撤销，使数据回滚到事务最开始的状态。
+</code></pre>
+<h3 id="1-封锁的概念，基本的封锁类型有几种？叙述他们的含义。"><a href="#1-封锁的概念，基本的封锁类型有几种？叙述他们的含义。" class="headerlink" title="1.封锁的概念，基本的封锁类型有几种？叙述他们的含义。"></a>1.封锁的概念，基本的封锁类型有几种？叙述他们的含义。</h3><pre><code class="答题区">概念：封锁就是事务T在对某个数据对象操作之前，先向系统发出请求，对其加锁，在事务T释放他的锁之前，
+    其他的事务不能更新或读此数据对象。
+
+基本的封锁类型有两种：排他锁、共享锁
+    排他锁：又称写锁，事务T对数据对象A加上X锁，则只允许T读取和修改A，其他事务不能再对A加任何类型的锁，
+        直到T释放A上的锁。
+    共享锁：又称读锁，事务T 对数据对象A加上S锁，则事务T可以读A 但不能修改A，其他的事务只能再对A加S锁，
+        而不能加X锁，直到T释放A上的S锁。
+
+</code></pre>
 
         </div>
         <!-- .entry-content -->
@@ -509,15 +696,15 @@ module.exports = {
           
             <div class="post-nepre half previous">
           
-            <a href="/2021/08/31/study_DB/" rel="prev">
+            <a href="/2021/11/11/关于Vue权限控制之路由权限的坑/" rel="prev">
               <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/Jimi331492/cdn@1.3/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/Jimi331492/cdn@1.3/img/my_pic/2.webp" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/Jimi331492/cdn@1.3/img/my_pic/2.webp">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/Jimi331492/cdn@1.3/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/Jimi331492/cdn@1.3/img/my_pic/4.webp" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/Jimi331492/cdn@1.3/img/my_pic/4.webp">
               </div>
               <span class="label">
               Previous Post</span>
               <div class="info">
                 <h3>
-                数据库系统常见简答题（持续更新）</h3>
+                关于Vue3.0权限控制之路由权限的坑</h3>
                 <hr>
               </div>
             </a>
@@ -527,15 +714,15 @@ module.exports = {
           
             <div class="post-nepre half next">
           
-            <a href="/2021/07/14/api接口文档/" rel="next">
+            <a href="/2021/08/01/e_mS/" rel="next">
               <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/Jimi331492/cdn@1.3/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/Jimi331492/cdn@1.3/img/my_pic/4.webp" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/Jimi331492/cdn@1.3/img/my_pic/4.webp">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/Jimi331492/cdn@1.3/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/Jimi331492/cdn@1.3/img/logo/vue_logo.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/Jimi331492/cdn@1.3/img/logo/vue_logo.jpg">
               </div>
               <span class="label">
               Next Post</span>
               <div class="info">
                 <h3>
-                电商管理后台API接口文档</h3>
+                电商管理后台说明文档</h3>
                 <hr>
               </div>
             </a>
@@ -543,6 +730,20 @@ module.exports = {
         
       </section>
       
+<div id="vcomments"></div>
+<script>
+  window.onload = function(){
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        appId: "PGlB0dWUHhHoNahwvkarMTJg-gzGzoHsz",
+        appKey: "p51jbXXSPaj4kowNiyeIx9VM",
+        path: window.location.pathname,
+        placeholder: "..."
+      })
+  }
+</script>
+
       <section class="author-profile">
         <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
           <a href="mmgoodstudy.icu" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/Jimi331492/cdn@1.1/img/custom/avatar.jpg" itemprop="image" alt="" height="70" width="70"></a>
