@@ -26,19 +26,19 @@ function bot_ui_ini() {
     }).then(function () {
         botui.message.add({
             delay: 1100,
-            content: "这里是AKA小阿Miao丶,生活从来不会单调"
+            content: "这里是妙啊丶的个人博客"
         }).then(function () {
             botui.message.add({
                 delay: 1100,
-                content: "来自湖南的代表~是个搞IT的小菜鸟，skrrrrrrr哒！    "
+                content: `利用Hexo博客框架搭建，主题为Sakura，作者博客地址是→https://www.hojun.cn/`
             }).then(function () {
                 botui.action.button({
                     delay: 1600,
                     action: [{
-                        text: "然后呢？ 😃",
+                        text: "继续 😃",
                         value: "sure"
                     }, {
-                        text: "少废话！ 🙄",
+                        text: " 🙄",
                         value: "skip"
                     }]
                 }).then(function (a) {
@@ -65,95 +65,26 @@ function bot_ui_ini() {
         secondpart = function () {
             botui.message.add({
                 delay: 1500,
-                content: "喜欢听歌搞技术，是你理解不了的艺术，到了你到不了的地步！"
+                content: "喜欢听听歌,敲敲代码"
             }).then(function () {
                 botui.message.add({
                     delay: 1500,
-                    content: "享受挑战，突破自己"
+                    content: "有钱就去旅游，没钱就赚钱准备去旅游"
                 }).then(function () {
                     botui.message.add({
                         delay: 1200,
-                        content: "你若要来，奉陪到底! Ang？"
+                        content: "就这样了"
                     }).then(function () {
-                        botui.action.button({
-                            delay: 1100,
-                            action: [{
-                            text: "你能别押了吗，快吐了 🤔",
-                            value: "why-mashiro"
-                                        }]
-                        }).then(function (a) {
-                            thirdpart()
-                        })
-                    })
-                            
-                    
-                })
-            })
-        },
-        thirdpart = function () {
-            botui.message.add({
-                delay: 1E3,
-                content: "嘤嘤嘤，喜欢说唱，不押就不押嘛"
-            }).then(function () {
-                botui.action.button({
-                    delay: 1500,
-                    action: [{
-                        text: "说说你为什么想创建这个博客吧？ 🤔",
-                        value: "why-cat"
-                    }]
-                }).then(function (a) {
-                    fourthpart()
-                })
-            })
-        },
-        fourthpart = function () {
-            botui.message.add({
-                delay: 1E3,
-                content: "喜欢特立独行的事物，在这个微博抖音疯狂肆虐的时代，我觉得自己搭建个人博客是一个很Cool的事情！ "
-            }).then(function () {
-                botui.message.add({
-                    delay: 1100,
-                    content: "主要也是有对这方面的兴趣，兴趣是最好的老师嘛"
-                }).then(function () {
-                    botui.action.button({
-                        delay: 1500,
-                        action: [{
-                            text: "那你这个域名有什么含意吗？(ง •_•)ง",
-                            value: "why-domain"
-                        }]
-                    }).then(function (a) {
-                        fifthpart()
-                    })
-                })
-            })
-        },
-        fifthpart = function () {
-            botui.message.add({
-                delay: 1E3,
-                content: "意思就是妙妙好好学习最后会进ICU。。"
-            }).then(function () {
-                botui.message.add({
-                    delay: 1600,
-                    content: "也代表了I see You(其实就是icu域名便宜嘤)"
-                }).then(function () {
-                    botui.message.add({
-                        delay: 1600,
-                        content: "最后欢迎给我留言噢！"
-                }).then(function () {
-                    botui.action.button({
-                        delay: 1500,
-                        action: [{
-                            text: "你在教我做事？🙄",
-                            value: "teachMe"
-                        }]
-                    }).then(function (a) {
                         botui.message.add({
-                            delay: 1600,
-                            content: "嘤嘤嘤..."
-                    })
-                    })
+                            delay: 1200,
+                            content: "随便看看吧"
+                        }).then(function (a){
+
+                        })
+                    })  
                 })
             })
-        })
-        } 
+        }
+      
+       
 }
